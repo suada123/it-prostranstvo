@@ -1,0 +1,246 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b1020;
+  color: #edf2ff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  min-height: 75px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #111a30;
+  border-bottom: 1px solid #26334e;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logo span, .hero h1 span {
+  color: #38d9e6;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #c4cee2;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #38d9e6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid #38d9e6;
+  border-radius: 10px;
+  background: transparent;
+  color: #38d9e6;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary {
+  background: #38d9e6;
+  color: #081321;
+}
+
+.hero {
+  min-height: 480px;
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: radial-gradient(circle at 80% 40%, #203e70, #0b1020 65%);
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #38d9e6;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  margin: 20px 0;
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.1;
+}
+
+.hero p:not(.eyebrow) {
+  color: #bdc9dd;
+  margin-bottom: 28px;
+}
+
+.hero-art {
+  font-size: 130px;
+  filter: drop-shadow(0 0 35px #38d9e688);
+}
+
+.hero-art span {
+  color: #38d9e6;
+  font-size: 30px;
+}
+
+.section {
+  padding: 75px 8%;
+}
+
+.section h2 {
+  margin: 12px 0 30px;
+  font-size: 34px;
+}
+
+.search, input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #344562;
+  border-radius: 9px;
+  background: #151f35;
+  color: white;
+  font: inherit;
+}
+
+.search {
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course {
+  padding: 25px;
+  background: #151f35;
+  border: 1px solid #293956;
+  border-radius: 15px;
+  transition: .2s;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  border-color: #38d9e6;
+}
+
+.course div {
+  font-size: 38px;
+}
+
+.course h3 {
+  margin: 12px 0;
+}
+
+.course p, .about p {
+  color: #b8c5db;
+}
+
+.about {
+  background: #111a30;
+}
+
+.auth-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.auth-panel form, .contact-form {
+  display: grid;
+  gap: 15px;
+  padding: 25px;
+  background: #151f35;
+  border-radius: 15px;
+}
+
+.contact-form {
+  max-width: 600px;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#authStatus, #contactStatus {
+  margin-top: 15px;
+  color: #38d9e6;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #9cabc3;
+  background: #080d19;
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 400px;
+    padding: 60px 7%;
+  }
+
+  .hero-art {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 55px 7%;
+  }
+}
