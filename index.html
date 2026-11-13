@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d1b">
+<title>IT Пространство Pro</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,sans-serif;
+  background:#080d1b;color:#f4f7ff;
+  line-height:1.6
+}
+header{
+  display:flex;justify-content:space-between;
+  align-items:center;padding:20px 7%;
+  background:#0d1426;border-bottom:1px solid #202c45;
+  position:sticky;top:0;z-index:10
+}
+.logo{font-size:23px;font-weight:bold;color:#54d6ff}
+.logo span{color:white}
+nav{display:flex;gap:25px}
+nav a{color:#c4cde0;text-decoration:none}
+nav a:hover{color:#54d6ff}
+.hero{
+  min-height:510px;padding:90px 8%;
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;
+  background:radial-gradient(ellipse at 50% 20%,#173b68 0%,#101a32 40%,#080d1b 78%)
+}
+.tag{
+  color:#54d6ff;border:1px solid #287ba5;
+  padding:7px 17px;border-radius:30px;
+  margin-bottom:25px;font-size:13px
+}
+h1{font-size:clamp(35px,6vw,65px);line-height:1.15;max-width:850px}
+h1 span{color:#54d6ff}
+.hero p{color:#aab7d0;max-width:620px;margin:22px 0;font-size:18px}
+.btn{
+  display:inline-block;background:#28b8e9;color:#061321;
+  padding:13px 25px;border-radius:9px;
+  text-decoration:none;font-weight:bold;
+  border:0;cursor:pointer
+}
+.btn:hover{background:#70ddff}
+section{padding:70px 8%}
+.section-title{text-align:center;font-size:32px;margin-bottom:12px}
+.subtitle{text-align:center;color:#9eabc2;margin-bottom:35px}
+.search{
+  display:block;width:100%;max-width:600px;
+  margin:0 auto 35px;padding:16px 20px;
+  background:#111c32;border:1px solid #2a3b5b;
+  border-radius:10px;color:white;font-size:16px;
+  outline:none
+}
+.search:focus{border-color:#54d6ff}
+.cards{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.card{
+  background:linear-gradient(145deg,#14213b,#0d1629);
+  border:1px solid #253956;border-radius:15px;
+  padding:27px;transition:.25s
+}
+.card:hover{transform:translateY(-5px);border-color:#54d6ff}
+.icon{font-size:35px;margin-bottom:12px}
+.card h3{font-size:20px;margin-bottom:9px}
+.card p{color:#aab7ca;font-size:14px}
+.about{
+  background:#0d1528;text-align:center
+}
+.about p{max-width:750px;margin:15px auto;color:#aab7ca}
+.contact{text-align:center}
+footer{
+  padding:25px;text-align:center;
+  background:#060a14;color:#77849b;
+  border-top:1px solid #202c45
+}
+@media(max-width:750px){
+  header{padding:15px 5%;flex-wrap:wrap;gap:12px}
+  nav{gap:14px;font-size:13px;flex-wrap:wrap}
+  .hero{padding:75px 6%;min-height:440px}
+  section{padding:55px 6%}
+  .cards{grid-template-columns:1fr}
+  .section-title{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">IT <span>Пространство</span></div>
+  <nav>
+    <a href="#directions">Направления</a>
+    <a href="#about">О проекте</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="tag">ТВОЁ БУДУЩЕЕ НАЧИНАЕТСЯ ЗДЕСЬ</div>
+  <h1>Открой мир <span>информационных технологий</span></h1>
+  <p>Изучай программирование, кибербезопасность, искусственный интеллект и создавай технологии будущего вместе с IT Пространством.</p>
+  <a class="btn" href="#directions">Начать изучение →</a>
+</section>
+
+<section id="directions">
+  <h2 class="section-title">IT-направления</h2>
+  <p class="subtitle">Выбери область, которая тебе интересна</p>
+
+  <input class="search" id="search" type="search"
+  placeholder="🔎 Поиск направления...">
+
+  <div class="cards" id="cards">
+    <article class="card">
+      <div class="icon">💻</div>
+      <h3>Программирование</h3>
+      <p>Изучай HTML, CSS, JavaScript, Python и создавай собственные приложения и сайты.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🔐</div>
+      <h3>Кибербезопасность</h3>
+      <p>Узнай, как защищать данные, аккаунты, сети и цифровые системы от угроз.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🤖</div>
+      <h3>Искусственный интеллект</h3>
+      <p>Познакомься с нейросетями, машинным обучением и технологиями ИИ.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🌐</div>
+      <h3>Веб-разработка</h3>
+      <p>Создавай современные сайты, интерфейсы и интерактивные веб-приложения.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">📊</div>
+      <h3>Анализ данных</h3>
+      <p>Работай с информацией, изучай статистику и находи полезные закономерности.</p>
+    </article>
+
+    <article class="card">
+      <div class="icon">🎮</div>
+      <h3>Разработка игр</h3>
+      <p>Узнай, как создаются компьютерные игры, игровые миры и персонажи.</p>
+    </article>
+  </div>
+  <p id="empty" style="display:none;text-align:center;color:#aab7ca">Ничего не найдено.</p>
+</section>
+
+<section class="about" id="about">
+  <h2 class="section-title">О проекте</h2>
+  <p>IT Пространство Pro — образовательный портал для всех, кто хочет познакомиться с информационными технологиями.</p>
+  <p>Наша цель — сделать мир IT понятнее и помочь каждому найти интересное направление для развития.</p>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="section-title">Будущее начинается с тебя!</h2>
+  <p class="subtitle">Изучай технологии. Развивай навыки. Создавай новое.</p>
+  <a class="btn" href="#directions">Выбрать направление</a>
+</section>
+</main>
+
+<footer>
+  © 2026 IT Пространство Pro. Образовательный IT-проект.
+</footer>
+
+<script>
+const search = document.getElementById('search');
+const cards = [...document.querySelectorAll('.card')];
+const empty = document.getElementById('empty');
+
+search.addEventListener('input', () => {
+  const value = search.value.toLowerCase().trim();
+  let count = 0;
+  cards.forEach(card => {
+    const visible = card.textContent.toLowerCase().includes(value);
+    card.style.display = visible ? '' : 'none';
+    if (visible) count++;
+  });
+  empty.style.display = count ? 'none' : 'block';
+});
+</script>
+
+</body>
+</html>
